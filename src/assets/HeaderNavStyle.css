@@ -1,0 +1,263 @@
+* {
+  box-sizing: inherit;
+}
+
+.divHeader {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.headerLeft {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.headerRight {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.headerLeft .imgLogo {
+  width: 10%;
+}
+
+.headerLeft .imgLogo img {
+  width: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.slogun {
+  padding-left: 2%;
+  font-size: 25px;
+  font-weight: bold;
+  color: #d5c8a0;
+  margin: auto 0;
+}
+
+.headerRight a {
+  border: 1px solid white;
+  border-radius: 5px;
+  background: #d5c8a0;
+  padding: 10px 20px;
+  color: white;
+}
+
+.headerRight .btnDangNhap {
+  color: #57412b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.gdARiY {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin-bottom: 15px;
+}
+
+.JiLrb {
+  margin: 0px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.list-inline,
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.gdARiY a {
+  text-decoration: none;
+}
+
+.bAYFRD a.active li {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    84.39deg,
+    rgb(164, 215, 46) 23.12%,
+    rgb(136, 178, 38) 93.07%
+  );
+  box-shadow: rgba(134, 176, 38, 0.25) 1px 3px 10px;
+}
+
+.degoCR {
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+  color: rgb(62, 85, 11);
+  background: rgb(255, 255, 255);
+  box-shadow: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.gdARiY .nav-icon {
+  width: 24px;
+}
+
+.degoCR svg {
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+  transition: all 0.2s ease 0s;
+}
+
+.jZGNBW {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.ewqGCM {
+  margin: 0px 0.5rem;
+}
+
+.ewqGCM .btn-secondary {
+  color: inherit;
+  background: inherit;
+  border: none;
+  padding: unset;
+  transition: none 0s ease 0s;
+  font-size: 16px;
+}
+
+.degoCR {
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+  color: rgb(62, 85, 11);
+  background: rgb(255, 255, 255);
+  box-shadow: none;
+}
+
+.gdARiY .nav-icon {
+  width: 24px;
+}
+
+.degoCR svg {
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+  transition: all 0.2s ease 0s;
+}
+
+.ewqGCM .btn-secondary .chev-down {
+  width: 24px;
+  margin-right: 0px;
+}
+
+.degoCR svg {
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+  transition: all 0.2s ease 0s;
+}
+
+.jZGNBW {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.bhhAF {
+  border-radius: 4px;
+  box-shadow: rgba(25, 42, 70, 0.1) 5px 5px 15px;
+  transform: translate3d(0px, 40px, 0px) !important;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  /* display: none; */
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.gdARiY a {
+  text-decoration: none;
+}
+
+.lhXIuw {
+  font-weight: 500;
+  padding: 10px 20px;
+  color: #57412b;
+  background: rgb(255, 255, 255);
+}
+
+.lhXIuw svg {
+  width: 24px;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+  fill: rgb(62, 85, 11);
+}
+
+.gdARiY a {
+  text-decoration: none;
+}
+
+.lhXIuw svg {
+  color: black;
+}
+
+.JiLrb .isActive li {
+  background: #d5c8a0;
+}
+
+.degoCR .icon {
+  width: 24px;
+  margin: -2px 5px 2px 0;
+}
+.menu-item {
+  text-align: center;
+}
+.card-menu {
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 6px;
+}
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+.card-menu-des {
+  text-align: left;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

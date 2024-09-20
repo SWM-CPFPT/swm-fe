@@ -1,0 +1,41 @@
+{
+    "TestDetails": [
+      {
+        "TestDetailID": 1,
+        "AccountID": 101,
+        "Score": 85,
+        "SubjectID": 1,
+        "Submitted": true,
+        "CreateDate": "2023-07-15"
+      },
+      {
+        "TestDetailID": 2,
+        "AccountID": 102,
+        "Score": 92,
+        "SubjectID": 2,
+        "Submitted": true,
+        "CreateDate": "2023-07-16"
+      },
+      {
+        "TestDetailID": 3,
+        "AccountID": 103,
+        "Score": 78,
+        "SubjectID": 1,
+        "Submitted": true,
+        "CreateDate": "2023-07-17"
+      }
+    ],
+    "Subjects": [
+      {
+        "SubjectID": 1,
+        "SubjectName": "Mathematics",
+        "ImgLink": "https://example.com/mathematics.jpg"
+      },
+      {
+        "SubjectID": 2,
+        "SubjectName": "Science",
+        "ImgLink": "https://example.com/science.jpg"
+      }
+    ]
+  }
+  

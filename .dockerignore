@@ -1,0 +1,11 @@
+/node_modules
+
+### VisualStudioCode template
+
+.vscode/_
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+_.code-workspace
+.vs/

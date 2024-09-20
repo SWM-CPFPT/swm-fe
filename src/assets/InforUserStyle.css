@@ -1,0 +1,12 @@
+.ant-picker .ant-picker-input input{
+    color: rgb(0, 0, 0, 0.5);
+    font-size: 18px;
+}
+
+.select{
+    border: none;
+    color: rgb(0, 0, 0, 0.5);
+    font-size: 18px;
+    width: 100%;
+    margin-left: 20px;
+}

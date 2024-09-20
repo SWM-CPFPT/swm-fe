@@ -1,0 +1,301 @@
+.body-forum {
+  width: 100%;
+  margin-top: 30px;
+  background-color: #eee;
+  height: auto;
+}
+
+.container {
+  width: 55%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.createPost {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.post-container {
+  margin-top: 40px;
+}
+
+.form {
+  margin: auto;
+  padding: 10px;
+  width: 95%;
+  margin-bottom: 40px;
+}
+
+hr {
+  margin: auto;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.bottom-form {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: right;
+}
+
+.item-bottom-form {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.item-bottom-form img {
+  background-image: none;
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+
+/*Post*/
+
+.post {
+  width: 100%;
+  background-color: #eee;
+  margin-top: 20px;
+}
+
+.post-empty {
+  text-align: center;
+  color: #1677ff;
+}
+
+.form-post {
+  background-color: #fff;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+}
+
+#filter-post-form {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+  flex-direction: row;
+}
+
+#filter-post-form .form-item {
+  margin-bottom: 0;
+}
+
+.select-box {
+  flex: 0 0 20%;
+  margin-right: 16px;
+}
+
+.form-info {
+  display: flex;
+}
+
+.form-mid-top {
+  display: flex;
+}
+
+.form-left {
+  width: 5%;
+}
+
+.form-mid {
+  width: 90%;
+}
+
+.form-mid-top {
+  height: 30px;
+  margin-top: 5px;
+  color: #656c6a;
+}
+
+.form-mid-top-subject {
+  background-color: #fd7070;
+  padding: 2px 15px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 1px;
+}
+
+.form-mid-top-type {
+  background-color: #707efd;
+  padding: 2px 15px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 1px;
+}
+
+.form-mid-content img {
+  height: auto;
+  width: 80%;
+}
+
+.form-right {
+  width: 5%;
+}
+
+.form-right img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.form-like {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.form-like img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.form-like p {
+  display: block;
+  padding-top: 15px;
+  margin-right: 15px;
+  margin-left: 2px;
+}
+
+.form-comment {
+  display: flex;
+}
+
+.form-comment-left {
+  width: 5%;
+}
+
+.form-comment-midle {
+  display: flex;
+  width: 85%;
+}
+
+.form-comment-right {
+  display: flex;
+  width: 10%;
+}
+
+.form-comment-right img {
+  width: 35px;
+  height: 35px;
+}
+
+.comment-wrapper {
+  display: flex;
+  margin: 12px 0;
+}
+
+.comment-right {
+  font-size: 13px;
+  color: #656c6a;
+  margin-left: 20px;
+  flex: 0 0 85%;
+}
+
+.comment-content {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #f5f6f7;
+  border-radius: 10px;
+}
+
+.comment-right p {
+  color: black;
+  font-size: 14px;
+  margin-bottom: 0;
+  max-width: 380px;
+}
+
+.comment-right p[contenteditable="true"] {
+  padding: 8px;
+}
+
+.comment-right img {
+  height: auto;
+}
+
+.comment-action {
+  display: flex;
+  color: #656c6a;
+}
+
+.comment-action-btn {
+  font-size: 12px;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.comment-action-btn:first-child {
+  margin-right: 12px;
+}
+
+.comment-title {
+  margin: 24px 0;
+}
+
+.comment-title-empty {
+  text-align: center;
+}
+
+.comment-modal .ant-modal-body {
+  max-height: 60vh;
+  overflow-x: hidden;
+}
+
+.comment-modal .ant-modal-body::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 10px;
+}
+
+.comment-modal .ant-modal-body::-webkit-scrollbar-track {
+  background-color: #f5f6f7;
+}
+
+.comment-modal .ant-modal-body::-webkit-scrollbar-thumb {
+  background-color: #99ccff;
+}
+
+.post-tab-item {
+  padding: 8px 15px;
+  margin: 0 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fff;
+}
+
+.post-tab-item.active {
+  background-color: #99ccff;
+}
+
+.post-tab-item:first-child {
+  margin-left: 0;
+}
+
+.post-tab-item:last-child {
+  margin-right: 0;
+}
+
+.delete-post-btn {
+  margin-top: 24px;
+}
+
+.admin-action-btn {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-action-btn .delete-post-btn {
+  margin-top: 0;
+}

@@ -1,0 +1,78 @@
+.exam-finish {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.exam-finish-title {
+    display: flex;
+}
+
+.exam-finish-title img {
+    width: 50px;
+    height: 50px;
+}
+
+.exam-finish-title p {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 0px;
+    margin-top: auto;
+}
+
+.exam-finish-line {
+    height: 3px;
+    background-color: antiquewhite;
+}
+
+.exam-finish-result {
+    width: 40%;
+    margin: 0 auto;  
+    background-color: rgb(211, 243, 247);
+    padding: 50px 20px 30px 20px;
+    border-radius: 20px ;
+}
+
+.exam-finish-result h5{
+    text-align: center;
+}
+
+.exam-finish-result p {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    width: 80%;
+    margin-left: 30px;
+    color: rgb(88, 90, 92);
+}
+
+.exam-finish-result span{
+    color: rgb(26, 108, 216);
+    font-weight: bold;
+}
+
+.exam-finish-result-button {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin:  0 auto;
+    margin-top: 20px;
+}
+
+.exam-finish-result-button-other {
+    background-color: rgb(42, 180, 204);
+    color: white;
+    padding: 8px 30px;
+    font-size:18px;
+    border-radius: 15px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.exam-finish-result-button-detail {
+    background-color: rgb(49, 204, 101);
+    color: white;
+    padding: 8px 30px;
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+}

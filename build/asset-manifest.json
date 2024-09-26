@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.19faad60.css",
+    "main.js": "/static/js/main.a11849cf.js",
+    "static/js/453.9d3cd94e.chunk.js": "/static/js/453.9d3cd94e.chunk.js",
+    "static/media/study-rewards.jpg": "/static/media/study-rewards.628cb89f31f70118d9ca.jpg",
+    "index.html": "/index.html",
+    "main.19faad60.css.map": "/static/css/main.19faad60.css.map",
+    "main.a11849cf.js.map": "/static/js/main.a11849cf.js.map",
+    "453.9d3cd94e.chunk.js.map": "/static/js/453.9d3cd94e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19faad60.css",
+    "static/js/main.a11849cf.js"
+  ]
+}

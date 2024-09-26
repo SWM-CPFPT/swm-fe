@@ -123,31 +123,31 @@ export default function ManageTopic() {
             fixed: "left",
             filterDropdown: ({ setSelectedKeys, selectedKeys, confirm }) => {
                 return (
-                    <Input
-                        autoFocus
-                        placeholder="Nhập lớp"
-                        value={selectedKeys[0]}
-                        onChange={(e) => {
-                            setSelectedKeys(e.target.value ? [e.target.value] : []);
-                        }}
-                        onPressEnter={() => {
-                            confirm();
-                        }}
-                        onBlur={() => {
-                            confirm();
-                        }}
-                    ></Input>
+                  <Input
+                    autoFocus
+                    placeholder="VD: khối 10"
+                    value={selectedKeys[0]}
+                    onChange={(e) => {
+                      setSelectedKeys(e.target.value ? [e.target.value] : []);
+                    }}
+                    onPressEnter={() => {
+                      confirm();
+                    }}
+                    onBlur={() => {
+                      confirm();
+                    }}
+                  ></Input>
                 );
-            },
-            filterIcon: () => {
+              },
+              filterIcon: () => {
                 return <SearchOutlined />;
-            },
-            onFilter: (value, record) => {
-                if (record.grade != null) {
-                    const gradeNumber = Number(record.grade);
-                    return !isNaN(gradeNumber) && gradeNumber === Number(value);
+              },
+              onFilter: (value, record) => {
+                if (record.grade !== null) {
+                  return record.grade.toLowerCase().includes(value.toLowerCase());
                 }
-            },
+              },
+           
         },
         {
             title: "Loại Topic",

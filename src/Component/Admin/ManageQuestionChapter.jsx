@@ -218,8 +218,8 @@ export default function ManageQuestionByMod() {
         return <SearchOutlined />;
       },
       onFilter: (value, record) => {
-        if (record.questionContent != null) {
-          return record.questionContent
+        if (record.questionContext != null) {
+          return record.questionContext
             .toLowerCase()
             .includes(value.toLowerCase());
         }
@@ -253,7 +253,7 @@ export default function ManageQuestionByMod() {
       },
       onFilter: (value, record) => {
         if (record.level != null) {
-          return record.level.toLowerCase().includes(value.toLowerCase());
+          return record.level.levelName.toLowerCase().includes(value.toLowerCase());
         }
       },
     },

@@ -54,7 +54,7 @@ export default function ActivityUser() {
       {contextHolder}
       <ul className="content-list">
         <li>
-          <span>{activity.totalQuestion} câu</span>Đã làm
+          <span>{activity.totalQuestion}câu </span>Đã làm
         </li>
         <li>
           <span>{activity.totalTime} phút</span>Tổng thời gian thi

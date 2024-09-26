@@ -151,7 +151,7 @@ export default function ManageUser() {
                             icon={<EditOutlined />}
                         ></Button>{" "}
                         &nbsp;
-                        {record.status == "Đang hoạt động" ? (
+                        {record.status === "ACTIVE" || record.status === "Đang hoạt động"  ? (
                             <Button
                                 onClick={() => handleChangeStatusDeActivate(record)}
                                 style={{ color: "white", backgroundColor: "red" }}
@@ -160,7 +160,7 @@ export default function ManageUser() {
                         ) : (
                             <></>
                         )}
-                        {record.status == "Đang khóa" ? (
+                        {record.status === "INACTIVE" ||record.status === "Đang khóa" ? (
                             <Button
                                 onClick={() => handleChangeStatusActivate(record)}
                                 style={{ color: "white", backgroundColor: "green" }}
@@ -323,7 +323,7 @@ export default function ManageUser() {
             cancelText: "Thoát",
             okType: "danger",
             onOk: async () => {
-                const status = "Đang khóa";
+                const status = "INACTIVE";
                 // const result = handleChangeStatus(record.accountId, status);
                 const result = await ChangeStatusService(record.accountId, status);
                 if (result.status === 200) {
@@ -343,7 +343,7 @@ export default function ManageUser() {
             okType: "default",
             cancelText: "Thoát",
             onOk: async () => {
-                const status = "Đang hoạt động";
+                const status = "ACTIVE";
                 // handleChangeStatus(record.accountId, status);
                 const result = await ChangeStatusService(record.accountId, status);
                 if (result.status === 200) {

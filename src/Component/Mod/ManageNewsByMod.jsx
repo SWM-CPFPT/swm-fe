@@ -50,6 +50,7 @@ import { GetAllNewsCategoryService } from "../../services/NewsService";
 import { UserContext } from "../../contexts/UserContext";
 import { AddNewsService } from "../../services/NewsService";
 import { EditNewsService } from "../../services/NewsService";
+import  moment  from 'moment';
 
 const { Content } = Layout;
 
@@ -199,9 +200,10 @@ export default function ManageNewsByMod() {
     },
     {
       title: "Ngày tạo",
-      dataIndex: "createDate",
-      key: 1,
+      dataIndex: "dateCreated",
+      key: "dateCreated",
       fixed: "left",
+      render: (dateCreated) => (dateCreated ? moment(dateCreated).format('DD-MM-YYYY'): "Không có dữ liệu")
     },
     {
       title: "Trạng thái",

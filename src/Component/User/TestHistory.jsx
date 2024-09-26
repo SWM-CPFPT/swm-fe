@@ -247,6 +247,10 @@ export default function TestHistory() {
       const totalScore = filteredData.reduce((sum, item) => sum + item.score, 0);
       const diemtrungbinh = ((totalScore /filteredData.length)*10)
       const diemTrungBinhHinhTron = parseFloat(diemtrungbinh.toFixed(2));
+      console.log(totalScore)
+      console.log(diemtrungbinh)
+      console.log(diemTrungBinhHinhTron)
+
       console.log(filteredData)
       setDataChart([
         {
@@ -266,7 +270,9 @@ export default function TestHistory() {
       const totalScore = filteredData.reduce((sum, item) => sum + item.score, 0);
       const diemtrungbinh = ((totalScore /filteredData.length)*10)
       const diemTrungBinhHinhTron = parseFloat(diemtrungbinh.toFixed(2));
-      console.log(diemtrungbinh)
+      console.log("tong diem la:",totalScore)
+      console.log("tong trung binh la:",diemtrungbinh)
+      console.log("diem trung binh hinh tron:",diemTrungBinhHinhTron)
       setDataChart([
         {
           sex: "Understood",

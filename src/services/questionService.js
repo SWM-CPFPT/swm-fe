@@ -15,7 +15,21 @@ export const GetQuestionByTopicId = async (topicId) => {
     return e;
   }
 };
-
+export const GetQuestionByTopicIdInUser = async (topicId) => {
+  try {
+    const respone = await Request({
+      method: "get",
+      url: `Question/GetQuestionByTopicIdInUser?topicId=${topicId}`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(respone);
+    return respone;
+  } catch (e) {
+    return e;
+  }
+};
 export const GetAllQuestionByTopicIdService = async (topicId) => {
   try {
     const respone = await Request({

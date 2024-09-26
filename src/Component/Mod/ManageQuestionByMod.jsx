@@ -57,6 +57,7 @@ import {
   GetAllChapterService,
   GetAllChapterByToPicIdService,
   GetQuestionByCourseChaptersInUser,
+  GetQuestionByCourseChaptersInMod,
   DeleteQuestionInQuestionFromTopic
 } from "../../services/chapterService";
 import { useCookies } from "react-cookie";
@@ -758,7 +759,7 @@ export default function ManageQuestionByMod() {
 
   const handleGetData = async (chapterId) => {
     try {
-      const result = await GetQuestionByCourseChaptersInUser(chapterId);
+      const result = await GetQuestionByCourseChaptersInMod(chapterId);
       if (result && result.data) {
         setDataSourceChapter(result.data);
       }
@@ -883,7 +884,18 @@ const handleCancelModalChapter = () => {
               <Button type="primary" onClick={showModal}>
                 Thêm Question bằng Excel
               </Button>
-
+              <Button type="primary"
+              style={{ marginBottom: "20px", marginLeft: "10px" }}
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/template_import/AddQuestionByExcel.xlsx';  // Thay '/path/to/' bằng đường dẫn thực tế đến tệp Excel
+                link.setAttribute('download', 'AddQuestionByExcel.xlsx');  // Thiết lập tên tệp khi tải về
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}>
+                Tải mẫu import
+            </Button>
               <Button
                 type="primary"
                 onClick={showModalChapter}

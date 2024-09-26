@@ -74,8 +74,8 @@ export default function ManageTopicByMod() {
         return <SearchOutlined />;
       },
       onFilter: (value, record) => {
-        if (record.subjectName != null) {
-          return record.subjectName.toLowerCase().includes(value.toLowerCase());
+        if (record.subject.subjectName != null) {
+          return record.subject.subjectName.toLowerCase().includes(value.toLowerCase());
         }
       },
     },
@@ -108,12 +108,18 @@ export default function ManageTopicByMod() {
         return <SearchOutlined />;
       },
       onFilter: (value, record) => {
-        if (record.topicName != null) {
-          return record.topicName.toLowerCase().includes(value.toLowerCase());
+        if (record.chapterTitle != null) {
+          return record.chapterTitle.toLowerCase().includes(value.toLowerCase());
         }
       },
     },
-
+    {
+      title: "Tổng câu hỏi",
+      dataIndex: "totalQuestion",
+      key: "totalQuestion",
+      width: 600,
+      fixed: "left",
+    },
     {
       title: "Lớp",
       dataIndex: ["grade", "nameGrade"],
@@ -123,7 +129,7 @@ export default function ManageTopicByMod() {
         return (
           <Input
             autoFocus
-            placeholder="Nhập lớp"
+            placeholder="VD: Khối 10"
             value={selectedKeys[0]}
             onChange={(e) => {
               setSelectedKeys(e.target.value ? [e.target.value] : []);
@@ -141,9 +147,8 @@ export default function ManageTopicByMod() {
         return <SearchOutlined />;
       },
       onFilter: (value, record) => {
-        if (record.grade != null) {
-          const gradeNumber = Number(record.grade);
-          return !isNaN(gradeNumber) && gradeNumber === Number(value);
+        if (record.grade !== null) {
+          return record.grade.nameGrade.toLowerCase().includes(value.toLowerCase());
         }
       },
     },

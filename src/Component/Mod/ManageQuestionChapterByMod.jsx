@@ -218,8 +218,8 @@ export default function ManageQuestionByMod() {
         return <SearchOutlined />;
       },
       onFilter: (value, record) => {
-        if (record.questionContent != null) {
-          return record.questionContent
+        if (record.questionContext != null) {
+          return record.questionContext
             .toLowerCase()
             .includes(value.toLowerCase());
         }
@@ -253,7 +253,7 @@ export default function ManageQuestionByMod() {
       },
       onFilter: (value, record) => {
         if (record.level != null) {
-          return record.level.toLowerCase().includes(value.toLowerCase());
+          return record.level.levelName.toLowerCase().includes(value.toLowerCase());
         }
       },
     },
@@ -772,7 +772,18 @@ export default function ManageQuestionByMod() {
               <Button type="primary" onClick={showModal}>
                 Thêm Question bằng Excel
               </Button>
-
+              <Button type="primary"
+              style={{ marginBottom: "20px", marginLeft: "10px" }}
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/template_import/File_Upload_Excel_In_CourceChapter.xlsx';  // Thay '/path/to/' bằng đường dẫn thực tế đến tệp Excel
+                link.setAttribute('download', 'File_Upload_Excel_In_CourceChapter.xlsx');  // Thiết lập tên tệp khi tải về
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}>
+                Tải mẫu import
+            </Button>
               <Modal
                 title="Tải bằng file Excel"
                 open={isModalOpen}

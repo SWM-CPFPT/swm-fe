@@ -25,7 +25,8 @@ import TopicStudy from "./Component/User/TopicStudy";
 import Contest from "./Component/User/Contest";
 import Ranking from "./Component/User/Ranking";
 import NewsDetail from "./Component/User/NewsDetail";
-
+//RegisterConfirm
+import RegisterConfirm from "./Component/User/RegisterConfirm";
 //#Region Admin Routes
 import ManageUser from "./Component/Admin/ManageUser";
 import ManageMod from "./Component/Admin/ManageMod";
@@ -63,6 +64,7 @@ function App() {
       <ToastContainer />
       <BrowserRouter>
         <Routes>
+          <Route path="/RegisterConfirm" element={<RegisterConfirm />} /> 
           <Route path="/" element={<HomePage />}></Route>
           {!token ? (
             <>

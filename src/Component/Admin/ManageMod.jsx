@@ -165,7 +165,7 @@ export default function ManageMod() {
                             icon={<EditOutlined />}
                         ></Button>{' '}
                         &nbsp;
-                        {record.status == 'Đang hoạt động' ? (
+                        {record.status === 'ACTIVE' ? (
                             <Button
                                 onClick={() => handleChangeStatusDeActivate(record)}
                                 style={{ color: 'white', backgroundColor: 'red' }}
@@ -174,7 +174,7 @@ export default function ManageMod() {
                         ) : (
                             <></>
                         )}
-                        {record.status == 'Đang khóa' ? (
+                        {record.status === 'INACTIVE' ? (
                             <Button
                                 onClick={() => handleChangeStatusActivate(record)}
                                 style={{ color: 'white', backgroundColor: 'green' }}
@@ -287,7 +287,7 @@ export default function ManageMod() {
             okText: 'Khóa',
             okType: 'danger',
             onOk: async () => {
-                const result = await ChangeStatusService(record.accountId, 'Đang khóa');
+                const result = await ChangeStatusService(record.accountId, 'INACTIVE');
                 if (result.status === 200) {
                     handleGetData();
                     openNotificationEnable('topRight');
@@ -304,7 +304,7 @@ export default function ManageMod() {
             okText: 'Mở',
             okType: 'default',
             onOk: async () => {
-                const result = await ChangeStatusService(record.accountId, 'Đang hoạt động');
+                const result = await ChangeStatusService(record.accountId, 'ACTIVE');
                 if (result) {
                     handleGetData();
                     openNotificationEnable('topRight');

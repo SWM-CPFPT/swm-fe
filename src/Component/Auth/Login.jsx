@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
 // import jwt_decode from 'jwt-decode';
 // import axios from 'axios';
-
+import axios from 'axios';
 import { LoginService } from "../../services/userService";
 import { handleValidationRegister } from "../../assets/js/handleValidation";
 import { RegisterService } from "../../services/userService";
@@ -207,6 +207,18 @@ export default function Login() {
       setErrors(errors);
     }
   };
+  useEffect(() => {
+    // Gọi API
+    const urlParams = new URLSearchParams(window.location.search);
+    const email = urlParams.get('email');
+    axios.get(`https://localhost:7207/api/home/confirm?email=${email}`)
+        .then(response => {
+          console.log(response);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }, []); 
   //#endregion
 
   //#region - Function - Login by google gmail
@@ -314,7 +326,7 @@ export default function Login() {
         <div className="panels-container">
           <div className="panel left-panel">
             <div className="content">
-              <h3>STUDY WITH ME</h3>
+              <h3>New Here ?</h3>
               <p>
                 Welcome to our platform! Please enter your username and password
                 to access your account. If you don't have an account yet, you

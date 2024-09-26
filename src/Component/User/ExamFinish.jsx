@@ -80,7 +80,7 @@ export default function ExamFinish() {
             <p>
               Điểm:{" "}
               <span style={{ color: item.score < 5 ? "red" : "inherit" }}>
-                {item.score}
+                {item.score.toFixed(2)}
               </span>
             </p>
             {item.score < 5 ? (

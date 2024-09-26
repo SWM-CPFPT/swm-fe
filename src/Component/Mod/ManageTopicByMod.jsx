@@ -155,9 +155,8 @@ export default function ManageTopicByMod() {
         return <SearchOutlined />;
       },
       onFilter: (value, record) => {
-        if (record.grade != null) {
-          const gradeNumber = Number(record.grade);
-          return !isNaN(gradeNumber) && gradeNumber === Number(value);
+        if (record.grade !== null) {
+          return record.grade.toLowerCase().includes(value.toLowerCase());
         }
       },
     },

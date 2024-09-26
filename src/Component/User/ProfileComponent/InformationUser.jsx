@@ -664,7 +664,7 @@ export default function InformationUser() {
                     <Input
                       type={enableDisable}
                       class="form-control"
-                      value={userInfo.password}
+                      placeholder="Nhập mật khẩu hiện tại"
                       style={{ marginLeft: "0", marginTop: "10px" }}
                       onClick={onClickDisplayPassword}
                     />

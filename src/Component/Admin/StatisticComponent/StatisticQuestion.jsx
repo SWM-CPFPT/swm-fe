@@ -155,7 +155,7 @@ export default function StatisticQuestion() {
                                 margin: '0'
                             }}
                         >
-                            Số lượng lâu hỏi theo dạng bài
+                            Số lượng câu hỏi theo dạng bài
                         </p>
                         <div className='d-flex align-items-center w-50'>
                             <div className="searchSubject w-75" style={{ margin: '10px auto' }}>

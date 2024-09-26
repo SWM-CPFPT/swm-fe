@@ -60,6 +60,21 @@ export const GetQuestionByCourseChaptersInUser = async (chapterId) => {
     return e;
   }
 };
+export const GetQuestionByCourseChaptersInMod = async (chapterId) => {
+  try {
+    const respone = await Request({
+      method: "get",
+      url: `Coursechapter/GetQuestionByCourseChaptersInMod?IdCourseChapter=${chapterId}`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(respone);
+    return respone;
+  } catch (e) {
+    return e;
+  }
+};
 export const GetCouseCharterByGrade = async (gradeId,subjectId) => {
   try {
       const respone = await Request({

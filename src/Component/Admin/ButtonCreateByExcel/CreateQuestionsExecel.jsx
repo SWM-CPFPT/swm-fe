@@ -63,6 +63,11 @@ export default function CreateQuestionsExcel() {
       <Button type="primary" onClick={showModal}>
         Thêm Question bằng Excel
       </Button>
+      <Button type="primary"
+      style={{ marginBottom: "20px", marginLeft: "10px" }}
+      onClick={showModal}>
+        Tải mẫu import
+      </Button>
       <Modal
         title="Tải bằng file Excel"
         open={isModalOpen}

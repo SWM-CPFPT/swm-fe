@@ -6,7 +6,7 @@ export default function hanldeValidationEditUser(editData, errors, phoneList) {
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
     const day = String(currentDate.getDate()).padStart(2, '0');
     const current = `${year}-${month}-${day}`;
-    if (!/^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/.test(editData.editPhoneNumber)) {
+    if (!/^(0|\+84)(\s|\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\d)(\s|\.)?(\d{3})(\s|\.)?(\d{3})$/.test(editData.editPhoneNumber)) {
         errors.editPhoneNumber = 'Số điện thoại phải 10 chữ số';
     }
     if (editData.editPhoneNumber == '' || editData.editPhoneNumber == null || editData.editPhoneNumber == " ") {
@@ -38,7 +38,7 @@ export function hanldeValidationEditMod(editData, errors, phoneList) {
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
     const day = String(currentDate.getDate()).padStart(2, '0');
     const current = `${year}-${month}-${day}`;
-    if (!/^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/.test(editData.editPhoneNumber)) {
+    if (!/^(0|\+84)(\s|\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\d)(\s|\.)?(\d{3})(\s|\.)?(\d{3})$/.test(editData.editPhoneNumber)) {
         errors.editPhoneNumber = 'Số điện thoại phải 10 chữ số';
     }
     if (editData.editPhoneNumber == '' || editData.editPhoneNumber == null || editData.editPhoneNumber == " ") {
@@ -71,7 +71,7 @@ export function hanldeValidationCreateMod(creataData, errors, emailList, phoneLi
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
     const day = String(currentDate.getDate()).padStart(2, '0');
     const current = `${year}-${month}-${day}`;
-    if (!/^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/.test(creataData.createPhoneNumber)) {
+    if (!/^(0|\+84)(\s|\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\d)(\s|\.)?(\d{3})(\s|\.)?(\d{3})$/.test(creataData.createPhoneNumber)) {
         errors.createPhoneNumber = 'Số điện thoại phải 10 chữ số';
     }
     if (creataData.createPhoneNumber == '' || creataData.createPhoneNumber == null || creataData.createPhoneNumber == " ") {
@@ -160,7 +160,7 @@ export function handleValidationUpdateUser(editData, errors, phoneList) {
         errors.editFullName = "Tên không chứa kí tự đặc biệt";
     }
 
-    if (!/^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/.test(editData.editPhone)) {
+    if (!/^(0|\+84)(\s|\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\d)(\s|\.)?(\d{3})(\s|\.)?(\d{3})$/.test(editData.editPhone)) {
         errors.editPhone = 'Số điện thoại phải 10 chữ số';
     }
     if (editData.editPhone == '' || editData.editPhone == null || editData.editPhone == " ") {
@@ -379,7 +379,7 @@ export function handleValidationEditNew(editData, errors, imageUpload) {
 }
 
 export function hanldeValidationEditAdmin(editData, errors, phoneList) {
-    if (!/^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/.test(editData.editPhoneNumber)) {
+    if (!/^(0|\+84)(\s|\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\d)(\s|\.)?(\d{3})(\s|\.)?(\d{3})$/.test(editData.editPhoneNumber)) {
         errors.editPhoneNumber = 'Số điện thoại phải 10 chữ số';
     }
     if (editData.editPhoneNumber == '' || editData.editPhoneNumber == null || editData.editPhoneNumber == " ") {
@@ -402,7 +402,7 @@ export function hanldeValidationEditAdmin(editData, errors, phoneList) {
 
 
 export function hanldeValidationCreateAdmin(creataData, errors, emailList, phoneList) {
-    if (!/^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/.test(creataData.createPhoneNumber)) {
+    if (!/^(0|\+84)(\s|\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\d)(\s|\.)?(\d{3})(\s|\.)?(\d{3})$/.test(creataData.createPhoneNumber)) {
         errors.createPhoneNumber = 'Số điện thoại phải 10 chữ số';
     }
     if (creataData.createPhoneNumber == '' || creataData.createPhoneNumber == null || creataData.createPhoneNumber == " ") {

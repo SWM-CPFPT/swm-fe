@@ -141,7 +141,7 @@ export default function ManageAdmin() {
               icon={<EditOutlined />}
             ></Button>{" "}
             &nbsp;
-            {record.status === "Đang hoạt động" ? (
+            {record.status === "ACTIVE" ? (
               <Button
                 onClick={() => handleChangeStatusDeActivate(record)}
                 style={{ color: "white", backgroundColor: "red" }}
@@ -150,7 +150,7 @@ export default function ManageAdmin() {
             ) : (
               <></>
             )}
-            {record.status === "Đang khóa" ? (
+            {record.status === "INACTIVE" ? (
               <Button
                 onClick={() => handleChangeStatusActivate(record)}
                 style={{ color: "white", backgroundColor: "green" }}
@@ -290,7 +290,7 @@ export default function ManageAdmin() {
       onOk: async () => {
         const result = await ChangeStatusAdminService(
           record.accountId,
-          "Đang khóa"
+          "INACTIVE"
         );
         if (result.status === 200) {
           handleGetData();
@@ -312,7 +312,7 @@ export default function ManageAdmin() {
       onOk: async () => {
         const result = await ChangeStatusAdminService(
           record.accountId,
-          "Đang hoạt động"
+          "ACTIVE"
         );
         if (result.status === 200) {
           handleGetData();

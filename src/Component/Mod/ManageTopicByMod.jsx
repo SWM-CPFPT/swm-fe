@@ -752,7 +752,7 @@ export default function ManageTopicByMod() {
                     onChange={handleCreateInputChange}
                   >
                     <option value="Chọn loại topic">Chọn loại topic</option>
-                    <option value="1">Học</option>
+{/*                     <option value="1">Học</option> */}
                     <option value="2">Thi 15p</option>
                     <option value="3">Thi 1 tiết</option>
                     <option value="4">Thi học kì</option>

@@ -60,7 +60,25 @@ export const AddQuestionService = async (data) => {
     return e;
   }
 };
-
+export const AddExcelQuestionInTopicID = async (
+  accountId,
+  topicID,
+  file
+) => {
+  try {
+    const respone = await Request({
+      method: "post",
+      url: `Question/AddExcelQuestionInTopicID?AccountId=${accountId}&TopicID=${topicID}`,
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+      data: file,
+    });
+    return respone;
+  } catch (error) {
+    console.log(error);
+  }
+};
 export const EditQuestionService = async (data) => {
   try {
     const respone = await Request({

@@ -260,7 +260,7 @@ export default function ManageQuestionByMod() {
     {
       title: "Người tạo",
       width: 100,
-      dataIndex: "userCreated",
+      dataIndex: "accountCreated",
       key: 1,
       fixed: "left",
       filterDropdown: ({ setSelectedKeys, selectedKeys, confirm }) => {

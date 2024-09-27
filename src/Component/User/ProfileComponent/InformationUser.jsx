@@ -654,7 +654,7 @@ export default function InformationUser() {
             <Form>
               <div className="modal-body" style={{ padding: "0 0.2rem 1rem" }}>
                 <div className="modal-change-info-body">
-                  <div className="row-info">
+                  {/* <div className="row-info">
                     <label for="name">
                       <span className="row-title" style={{ minwidth: "210px" }}>
                         Mật khẩu hiện tại
@@ -668,7 +668,7 @@ export default function InformationUser() {
                       style={{ marginLeft: "0", marginTop: "10px" }}
                       onClick={onClickDisplayPassword}
                     />
-                  </div>
+                  </div> */}
                   <div className="row-info">
                     <label for="gender">
                       <span class="row-title">

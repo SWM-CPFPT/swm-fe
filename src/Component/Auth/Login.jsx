@@ -326,7 +326,7 @@ export default function Login() {
         <div className="panels-container">
           <div className="panel left-panel">
             <div className="content">
-              <h3>STUDY WITH ME</h3>
+              <h3>New Here ?</h3>
               <p>
                 Welcome to our platform! Please enter your username and password
                 to access your account. If you don't have an account yet, you

@@ -50,7 +50,7 @@ import { GetTopicByIdService } from "../../services/topicService";
 import { AddQuestionService } from "../../services/questionService";
 import axios from "axios";
 import Sider from "antd/es/layout/Sider";
-import { AddQuestionByExcelService } from "../../services/questionService";
+import { AddExcelQuestionInTopicID } from "../../services/questionService";
 import "../../assets/Admin.css";
 import {
   AddQuestionInCourseChapterByTopic,
@@ -449,16 +449,15 @@ export default function ManageQuestionByMod() {
 
   //#region - Function - Thêm câu hỏi bằng Excel
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const [file, setFile] = useState(null);
+  const [fileList, setFileList] = useState(null);
   const props = {
-    name: "file",
-    maxCount: 1,
-    accept: ".xls, .xlsx",
-    fileList: file ? [file] : [],
     beforeUpload: (file) => {
-      setFile(file);
-      return false;
+      setFileList([file]); // Giới hạn 1 file
+      return false; // Ngăn mặc định tự upload
+    },
+    fileList,
+    onRemove: () => {
+      setFileList();
     },
   };
   const showModal = () => {
@@ -471,36 +470,33 @@ export default function ManageQuestionByMod() {
   };
   const handleCancel = () => {
     setIsModalOpen(false);
-    setFile();
+    setFileList();
   };
 
   const handleUpload = async () => {
     try {
-      if (file) {
-        const rows = await readXlsxFile(file);
-        setIsModalOpen(!isModalOpen);
-        setFile();
-        const data = {
-          subjectId: topic.subjectId,
-          accountId: user.accountId,
-          topicId: topic.topicId,
-          records: rows,
-        };
-        var result = await AddQuestionByExcelService(data);
-        if (result.status === 200) {
-          setIsModalOpen(!isModalOpen);
-          setFile();
-          CommonNotification(
-            "Thông báo",
-            "Thêm questions bằng file excel thành công!",
-            "success"
-          );
-          handleGetAllQuestionByTopic();
-          onSetRender();
-        }
-      } else {
-        console.log("Chọn file để upload.");
+      const formData = new FormData();
+      fileList.forEach((file) => {
+        formData.append("file", file);
+      });
+      var result = await AddExcelQuestionInTopicID(
+        user.accountId,
+        topic.topicId,
+        formData,
+      );
+      console.log(result);
+      if (!result) {
+        CommonNotification("Thông báo", "Lỗi khi thêm file!", "warning");
       }
+      setIsModalOpen(!isModalOpen);
+      setFileList();
+      CommonNotification(
+        "Thông báo",
+        "Thêm questions bằng file excel thành công!",
+        "success"
+      );
+      handleGetAllQuestionByChapter(topic.topicId);
+      window.location.reload();
     } catch (error) {
       CommonNotification("Thông báo", "Lỗi khi thêm file!", "warning");
     }
@@ -743,10 +739,10 @@ export default function ManageQuestionByMod() {
   const [chapter, setChapter] = useState([]);
   // temp
   //  const [dataTemp, setDataTemp] = useState([])
-  const handleGetAllQuestionByChapter = async (topicId) => {
+  const handleGetAllQuestionByChapter = async (topicId1) => {
     try {
-      console.log(topicId)
-      const result = await GetAllChapterByToPicIdService(topicId);
+      console.log(topicId1)
+      const result = await GetAllChapterByToPicIdService(topicId1);
       if (result && result.data) {
         setChapter(result.data);
       } else {
@@ -888,14 +884,15 @@ const handleCancelModalChapter = () => {
               style={{ marginBottom: "20px", marginLeft: "10px" }}
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/template_import/AddQuestionByExcel.xlsx';  // Thay '/path/to/' bằng đường dẫn thực tế đến tệp Excel
-                link.setAttribute('download', 'AddQuestionByExcel.xlsx');  // Thiết lập tên tệp khi tải về
+                link.href = '/template_import/File_Upload_Excel_In_CourceChapter.xlsx';  // Thay '/path/to/' bằng đường dẫn thực tế đến tệp Excel
+                link.setAttribute('download', 'File_Upload_Excel_In_CourceChapter.xlsx');  // Thiết lập tên tệp khi tải về
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
               }}>
                 Tải mẫu import
             </Button>
+
               <Button
                 type="primary"
                 onClick={showModalChapter}

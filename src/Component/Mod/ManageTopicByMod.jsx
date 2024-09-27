@@ -616,6 +616,7 @@ export default function ManageTopicByMod() {
   };
 
   const handleSubmitEdit = async () => {
+    console.log("run")
     let errors = {};
     if (Object.keys(errors).length === 0) {
       const data = {
@@ -629,7 +630,7 @@ export default function ManageTopicByMod() {
         topicType: editData.editTopicType,
         grade:  editData.editTopicType === "6"
         ? null
-        : editData.editGrade !== null
+        : (editData.editGrade !== null && editData.editGrade != "")
           ? editData.editGrade
           : null,
         startTestDate:
@@ -641,6 +642,7 @@ export default function ManageTopicByMod() {
             ? convertToUTCDate(editData.editEndDate)
             : null,
       };
+      console.log(data)
       const result = await UpdateTopicService(data);
       console.log(result);
       if (result.status === 200) {
@@ -752,7 +754,7 @@ export default function ManageTopicByMod() {
                     onChange={handleCreateInputChange}
                   >
                     <option value="Chọn loại topic">Chọn loại topic</option>
-{/*                     <option value="1">Học</option> */}
+                    <option value="1">Học</option>
                     <option value="2">Thi 15p</option>
                     <option value="3">Thi 1 tiết</option>
                     <option value="4">Thi học kì</option>

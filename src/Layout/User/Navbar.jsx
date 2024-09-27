@@ -180,7 +180,7 @@ export default function Navbar() {
               class="sc-cTkwdZ degoCR list-inline-item"
               style={{ color: "black" }}
             >
-              <h6 className="menu-item">Diễn đàng</h6>
+              <h6 className="menu-item">Diễn đàn</h6>
               <div className="card-menu d-flex">
                 <div className="">
                   <img
